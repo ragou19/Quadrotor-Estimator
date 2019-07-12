@@ -106,9 +106,9 @@ Next, the transition function Jacobian was calculated using acceleration command
 
 Here is what resulted in the simulator scenarios for predicting the state and covariance:
 
-![img](./images/predict-state.png)
+![img](./images/predict-state.gif)
 
-![img](./images/predict-covariance.png)
+![img](./images/predict-covariance.gif)
 
 ### 4. Implement the magnetometer update. ###
 
@@ -132,7 +132,7 @@ The magnetometer update was carried out by finding the difference between magnet
 
 Here's what it looked like in the simulator:
 
-![img](./images/mag.png)
+![img](./images/mag.gif)
 
 In particular, the error in yaw is maintained below 0.1 radians throughout the simulation, while the chosen standard deviation in yaw caused values to fall within it 71% of the time.
 
@@ -176,7 +176,7 @@ Since we get position and velocity directly from GPS, the measurement model Jaco
 
 Here is the result of incorporating the GPS information. While jittery, we see that it does stay within the 1m estimation error performance range for the duration of the scenario:
 
-![img](./images/gps-update.png)
+![img](./images/gps-update.gif)
 
 ## Rubric Criteria: Flight Evaluation ##
 
@@ -216,4 +216,4 @@ kpVelZ = 25
 
 The end result was a trajectory which did not deviate more than 1m in estimated position throughout the entire flight:
 
-![img](./images/gps-update.png)
+![img](./images/gps-update.gif)
