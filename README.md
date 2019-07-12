@@ -85,7 +85,7 @@ Next, the roll/pitch/yaw rotation matrix from body frame to ground frame was cal
 
 Here is a view of the equation on paper:
 
-![img](./images/rbg.png)
+![img](./images/rbg.gif)
 
 Next, the transition function Jacobian was calculated using acceleration commands in the `Predict()` step, and the state covariance was updated using Extended Kalman Filter equations:
 
@@ -102,7 +102,7 @@ Next, the transition function Jacobian was calculated using acceleration command
   ekfCov = gPrime * ekfCov * gPrime.transpose() + Q;
 ```
 
-![img](./images/gPrime.png)
+![img](./images/gPrime.gif)
 
 Here is what resulted in the simulator scenarios for predicting the state and covariance:
 
@@ -172,7 +172,7 @@ The state update from GPS consisted of the steps outlined below from the `Update
 
 Since we get position and velocity directly from GPS, the measurement model Jacobian was simple to implement, as its derivation in the paper mentioned previously demonstrates:
 
-![img](./images/gps-paper.png)
+![img](./images/gps-paper.gif)
 
 Here is the result of incorporating the GPS information. While jittery, we see that it does stay within the 1m estimation error performance range for the duration of the scenario:
 
